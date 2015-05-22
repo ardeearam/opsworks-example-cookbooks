@@ -17,6 +17,7 @@ node[:deploy].each do |application, deploy|
           "Honor guide me!",
           "For Adun!"
        ].sample
+       Chef::log.info("Protoss: #{node[:runtime][:zealot][:message]}")
     end
   end
   
