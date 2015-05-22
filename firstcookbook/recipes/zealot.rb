@@ -23,7 +23,7 @@ node[:deploy].each do |application, deploy|
   
   
   slack_say "say_something_clever" do
-    message node[:runtime][:zealot][:message]
+    message lazy {node[:runtime][:zealot][:message]}
     username "Protoss Zealot"
     icon_url "http://upload.wikimedia.org/wikipedia/en/8/8f/Zealot_(StarCraft).png"
   end
