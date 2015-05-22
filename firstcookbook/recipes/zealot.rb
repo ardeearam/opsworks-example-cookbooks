@@ -7,7 +7,7 @@ node[:deploy].each do |application, deploy|
   ruby_block "zealot_random_quotes" do 
     block do 
        #This is Chef's way to pass data between resources
-       node[:runtime][:zealot][:message] = [
+       node.set[:runtime][:zealot][:message] = [
           "My life for Aiur!",
           "What battle calls?",
           "I long for combat!",
